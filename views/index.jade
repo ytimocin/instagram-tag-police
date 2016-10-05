@@ -1,0 +1,47 @@
+extends layout
+
+block content
+
+    if showLogin
+        div.row
+            div.col-md-12.text-center
+                h1 Instagram Tag Police
+                p This is a micro-app to keep track of your favorite Instagram tags
+                p Log in to add your most favorite tags and receive notifications when new medias are tagged
+                p Yetkin Timocin - 1st of October 2016
+                a(href="/authorize-user" class="btn btn-primary") Login to Instagram
+    else
+        div.row
+            div.col-md-6
+                h1 profile.details
+
+                div
+                    img(src= profilePicture, width="50px" height="50px", class='image1')
+
+                div
+                    br
+                    p @ #{username}
+
+                div
+                    br
+                    p full.name: #{fullName}
+
+                div
+                    br
+                    p bio: #{bio}
+
+                div
+                    br
+                    p website: #{website}
+
+                div
+                    br
+                    p instagram.id: #{instagramId}
+
+                div
+                    br
+                    p tag.police.app.id: #{appId}
+
+        div.row
+            div.col-md-6
+                h1 tags
